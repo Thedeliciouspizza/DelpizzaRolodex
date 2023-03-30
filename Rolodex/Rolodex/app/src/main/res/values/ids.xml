@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dialogTitleTextView" type="id" />
+    <item name="firstNameEditText" type="id" />
+    <item name="middleNameEditText" type="id" />
+    <item name="lastNameEditText" type="id" />
+    <item name="phoneNumberEditText" type="id" />
+    <item name="OkButton" type="id" />
+    <item name="cancelButton" type="id" />
+</resources>
