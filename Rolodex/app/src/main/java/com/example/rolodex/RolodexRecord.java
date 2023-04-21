@@ -1,8 +1,10 @@
 package com.example.rolodex;
 
 import java.io.Serializable;
+import java.util.Random;
 
 public class RolodexRecord implements Serializable {
+    private String id;
     private String firstName;
     private String lastName;
     private String middleName;
@@ -10,16 +12,29 @@ public class RolodexRecord implements Serializable {
 
     // Constructor for RolodexRecord
     public RolodexRecord(String firstName, String lastName, String middleName, String phoneNumber) {
+        Random rand = new Random();
+        this.id = String.valueOf(rand.nextInt(1000000));
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
         this.phoneNumber = phoneNumber;
     }
-    public int getId() {
-        // Return a unique code
-        return (firstName + lastName).hashCode();
+
+    public RolodexRecord(String id, String firstName, String lastName, String middleName, String phoneNumber) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.phoneNumber = phoneNumber;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
 
     public String getName(){
